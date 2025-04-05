@@ -23,11 +23,11 @@ namespace To_Do_App_API.Controllers
         // GET: api/tasks
         [HttpGet]
         public async Task<IActionResult> GetTasks(
-            [FromQuery] string status,
-            [FromQuery] DateTime? dueBefore,
-            [FromQuery] string sortBy,
-            [FromQuery] string order,
-            [FromQuery] string tag)
+            [FromQuery] string status = null,
+            [FromQuery] DateTime? dueBefore = null,
+            [FromQuery] string sortBy = null,
+            [FromQuery] string order = null,
+            [FromQuery] string tag = null)
         {
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 

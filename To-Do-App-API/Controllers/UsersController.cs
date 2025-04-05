@@ -34,7 +34,8 @@ namespace To_Do_App_API.Controllers
                 Username = user.Username,
                 Email = user.Email,
                 FirstName = user.FirstName,
-                LastName = user.LastName
+                LastName = user.LastName,
+                CreatedAt = user.CreatedAt
             };
 
             return Ok(userDto);
