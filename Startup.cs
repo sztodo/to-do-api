@@ -23,6 +23,7 @@ namespace To_Do_App_API
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddEndpointsApiExplorer();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<ITaskService, TaskService>();
 
             services.AddSwaggerGen(c =>
             {
