@@ -20,13 +20,13 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore To_Do_App_API/To_Do_App_API.csproj
+      run: dotnet restore To-Do-App-API/To-Do-App-API.csproj
 
     - name: Build API project
-      run: dotnet build To_Do_App_API/To_Do_App_API.csproj --configuration Release --no-restore
+      run: dotnet build To-Do-App-API/To-Do-App-API.csproj --configuration Release --no-restore
 
     - name: Run unit tests
-      run: dotnet test To_Do_App_API-Tests/To_Do_App_API-Tests.csproj --no-build --verbosity normal
+      run: dotnet test To-Do-App-API-Tests/To-Do-App-API-Tests.csproj --no-build --verbosity normal
 
     - name: Publish API (simulate deployment)
       run: |
