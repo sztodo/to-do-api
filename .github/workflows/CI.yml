@@ -33,6 +33,6 @@ jobs:
 
     - name: Publish API (simulate deployment)
       run: |
-        dotnet publish To_Do_App_API/To_Do_App_API.csproj -c Release -o publish_output
+        dotnet publish To-Do-App-API.csproj -c Release -o publish_output
         mkdir -p deployed
         cp -r publish_output/* deployed/
