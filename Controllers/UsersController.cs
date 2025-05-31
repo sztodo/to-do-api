@@ -60,6 +60,7 @@ namespace To_Do_App_API.Controllers
             user.Email = updateUserDto.Email ?? user.Email;
             user.FirstName = updateUserDto.FirstName ?? user.FirstName;
             user.LastName = updateUserDto.LastName ?? user.LastName;
+            user.UpdatedAt = DateTime.Now;
 
             await _context.SaveChangesAsync();
 

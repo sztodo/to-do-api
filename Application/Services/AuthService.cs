@@ -38,7 +38,8 @@ namespace To_Do_App_API.Application.Services
                 Username = user.Username,
                 Email = user.Email,
                 FirstName = user.FirstName,
-                LastName = user.LastName
+                LastName = user.LastName,
+                CreatedAt = user.CreatedAt
             };
 
             return (true, token, userDto);
