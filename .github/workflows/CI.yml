@@ -38,7 +38,7 @@ jobs:
         cp -r publish_output/* deployed/
 
     - name: Upload deployed files as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: deployed-files
         path: deployed/
