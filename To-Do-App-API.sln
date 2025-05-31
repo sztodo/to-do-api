@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "To-Do-App-API-Tests", "..\To-Do-App-API-Tests\To-Do-App-API-Tests.csproj", "{FA000008-3766-48C5-85CE-10A81F479E8E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "To-Do-App-API-Tests", "To-Do-App-API-Tests\To-Do-App-API-Tests.csproj", "{CF8459E2-D866-FD7A-3E58-A84A90AD3490}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +22,10 @@ Global
 		{D8942206-8DDA-4740-BB11-FB06FF24D6AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8942206-8DDA-4740-BB11-FB06FF24D6AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8942206-8DDA-4740-BB11-FB06FF24D6AC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FA000008-3766-48C5-85CE-10A81F479E8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA000008-3766-48C5-85CE-10A81F479E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA000008-3766-48C5-85CE-10A81F479E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA000008-3766-48C5-85CE-10A81F479E8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF8459E2-D866-FD7A-3E58-A84A90AD3490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF8459E2-D866-FD7A-3E58-A84A90AD3490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF8459E2-D866-FD7A-3E58-A84A90AD3490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF8459E2-D866-FD7A-3E58-A84A90AD3490}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
