@@ -29,7 +29,7 @@ jobs:
       run: dotnet build To-Do-App-API-Tests/To-Do-App-API-Tests.csproj --configuration Release
 
     - name: Run unit tests
-      run: dotnet test To-Do-App-API-Tests/To-Do-App-API-Tests.csproj --no-build --verbosity normal
+      run: dotnet test To-Do-App-API-Tests/To-Do-App-API-Tests.csproj --configuration Release --no-build --verbosity normal
 
     - name: Publish API (simulate deployment)
       run: |
