@@ -1,0 +1,35 @@
+name: .NET CI + Simple Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore To_Do_App_API/To_Do_App_API.csproj
+
+    - name: Build API project
+      run: dotnet build To_Do_App_API/To_Do_App_API.csproj --configuration Release --no-restore
+
+    - name: Run unit tests
+      run: dotnet test To_Do_App_API-Tests/To_Do_App_API-Tests.csproj --no-build --verbosity normal
+
+    - name: Publish API (simulate deployment)
+      run: |
+        dotnet publish To_Do_App_API/To_Do_App_API.csproj -c Release -o publish_output
+        mkdir -p deployed
+        cp -r publish_output/* deployed/
