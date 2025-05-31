@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\To-Do-App-API\To-Do-App-API.csproj" />
+    <ProjectReference Include="..\To-Do-App-API.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using To_Do_App_API.Infrastructure;
 using To_Do_App_API.Infrastructure.Models;
-using Xunit;
 
 namespace To_Do_App_API_Tests.Infrasturcture
 {
