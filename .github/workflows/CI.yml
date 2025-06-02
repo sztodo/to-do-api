@@ -36,3 +36,9 @@ jobs:
         dotnet publish To-Do-App-API.csproj -c Release -o publish_output
         mkdir -p deployed
         cp -r publish_output/* deployed/
+
+    - name: Upload deployed files as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: deployed-files
+        path: deployed/
