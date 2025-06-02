@@ -8,6 +8,7 @@ using To_Do_App_API.Infrastructure;
 using To_Do_App_API.Infrastructure.Models;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
+using To_Do_App_API.Application.Validators;
 
 namespace To_Do_App_API.Application.Services
 {
@@ -47,6 +48,21 @@ namespace To_Do_App_API.Application.Services
 
         public async Task<(bool Success, string Message)> Register(RegisterDto registerDto)
         {
+            if (!PasswordValidator.IsStrongPassword(registerDto.Password))
+            {
+                return (false, "Weak password. Make sure it has at least 8 characters, an uppercase letter, a digit, and a symbol.");
+            }
+
+            if (PasswordValidator.IsInWeakList(registerDto.Password))
+            {
+                return (false, "The password is in the list of common passwords. Please choose another one.");
+            }
+
+            if (await PasswordValidator.IsPasswordPwnedAsync(registerDto.Password))
+            {
+                return (false, "The password has been compromised in a previous breach. Please choose a new one.");
+            }
+
             if (await _context.Users.AnyAsync(u => u.Username == registerDto.Username))
                 return (false, "Username already taken");
 

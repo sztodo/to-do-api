@@ -45,7 +45,7 @@ namespace To_Do_App_API_Tests.Application.Services
             {
                 Username = "testuser",
                 Email = "test@example.com",
-                Password = "TestPassword123!",
+                Password = "A!v3ryUn1qu3P@ssw0rd" + Guid.NewGuid().ToString("N"),
                 FirstName = "Test",
                 LastName = "User"
             };
@@ -83,7 +83,7 @@ namespace To_Do_App_API_Tests.Application.Services
             {
                 Username = "testuser",
                 Email = "new@example.com",
-                Password = "TestPassword123!",
+                Password = "A!v3ryUn1qu3P@ssw0rd" + Guid.NewGuid().ToString("n"),
                 FirstName = "Test",
                 LastName = "User"
             };
@@ -116,7 +116,7 @@ namespace To_Do_App_API_Tests.Application.Services
             {
                 Username = "newuser",
                 Email = "test@example.com",
-                Password = "TestPassword123!",
+                Password = "A!v3ryUn1qu3P@ssw0rd" + Guid.NewGuid().ToString("N"),
                 FirstName = "Test",
                 LastName = "User"
             };
@@ -133,7 +133,7 @@ namespace To_Do_App_API_Tests.Application.Services
         public async System.Threading.Tasks.Task Login_WithValidCredentials_ShouldSucceed()
         {
             // Arrange
-            var password = "TestPassword123!";
+            var password = "A!v3ryUn1qu3P@ssw0rd" + Guid.NewGuid().ToString("D");
             var registerDto = new RegisterDto
             {
                 Username = "testuser",
@@ -220,7 +220,7 @@ namespace To_Do_App_API_Tests.Application.Services
             {
                 Username = "testuser" + Guid.NewGuid().ToString("N").Substring(0, 8),
                 Email = email,
-                Password = "TestPassword123!",
+                Password = "A!v3ryUn1qu3P@ssw0rd" + Guid.NewGuid().ToString("N"),
                 FirstName = "Test",
                 LastName = "User"
             };
